@@ -6,12 +6,16 @@
     </head>
     <body>
         <div class="container">
-            <div class="search">
-                <form action="https://www.google.com/search">
-                    <input type="text" name="q">
-                    <input type="submit" value="Google Search">
+                <form action="https://www.google.com/search" class="search"><br>
+                    <label for="as_q">All these words: <input type="text" name="as_q"></label><br>
+                    <label for="as_epq">This exact word or phrase: <input type="text" name="as_epq"></label><br>
+                    <label for="as_oq">Any of these words: <input type="text" name="as_oq"></label><br>
+                    <label for="as_eq">None of these words: <input type="text" name="as_eq"></label><br>
+                    <div style="display: flex; justify-content: space-around;">
+                        <input type="text" name="q">
+                        <input type="submit" value="Google Search">
+                    </div>
                 </form>
-            </div>
             <div class="upper-right">
                 <a href="index.html">Regular Search</a>
                 <a href="imageSearch.html">Image Search</a>

@@ -99,30 +99,55 @@ Given URL: [https://www.google.com/search?q=harvard&newwindow=1&hl=en&tbm=isch&s
 
 **URL Breakdown**
 
-Given URL: [https://www.google.com/search?q=harvard&newwindow=1&hl=en&biw=1510&bih=1030&sxsrf=AB5stBhvRfJe0rGLyxmwf6lp5TRGjoBNaw%3A1691190007821&source=lnt&tbs=cdr%3A1%2Ccd_min%3A8%2F4%2F2023%2Ccd_max%3A8%2F1%2F2023&tbm=](https://www.google.com/search?q=harvard&newwindow=1&hl=en&biw=1510&bih=1030&sxsrf=AB5stBhvRfJe0rGLyxmwf6lp5TRGjoBNaw%3A1691190007821&source=lnt&tbs=cdr%3A1%2Ccd_min%3A8%2F4%2F2023%2Ccd_max%3A8%2F1%2F2023&tbm=)
+Given URL: [https://www.google.com/search?as_q=harvard&as_epq=html&as_oq=html%2C+css%2C+javascript&as_eq=bears&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&as_filetype=&tbs=](https://www.google.com/search?as_q=harvard&as_epq=html&as_oq=html%2C+css%2C+javascript&as_eq=bears&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&as_filetype=&tbs=)
 
-- `https://www.google.com/search`: Base URL for Google's search engine.
-- `q=harvard`: Query parameter where `q` stands for 'query'. The value `harvard` is the search term.
-- `newwindow=1`: Query parameter that instructs the browser to open the search results in a new window.
-- `hl=en`: The `hl` parameter specifies the interface language. Here, `en` stands for English.
-- `biw=1510` and `bih=1030`: These parameters indicate the browser's viewport size. `biw` stands for 'browser inner width' and `bih` for 'browser inner height'.
-- `sxsrf=AB5stBhvRfJe0rGLyxmwf6lp5TRGjoBNaw%3A1691190007821`: A security-related parameter, likely a token to prevent cross-site request forgery.
-- `source=lnt`: The `source` parameter refers to the origin of the search. Here, `lnt` likely stands for 'tools' as this search uses Google's search tools.
-- `tbs=cdr%3A1%2Ccd_min%3A8%2F4%2F2023%2Ccd_max%3A8%2F1%2F2023`: `tbs` stands for 'to be specified'. This parameter is used to apply filters to the search. Here, it is specifying a custom date range (cdr). `cd_min` and `cd_max` are specifying the start and end of the date range.
-- `tbm=`: `tbm` stands for 'to be matched'. Here, no value is given, indicating a standard web search is to be performed.
+### URL Components:
 
-**Note**: Google uses many encoded or proprietary parameters for its own tracking and customization purposes, so exact definitions for some parameters may not be publicly documented.
+#### 1. **Protocol**:
+- `https://` 
+  - Denotes the protocol used, which is HTTPS (Hypertext Transfer Protocol Secure).
 
-- `tbs=cdr%3A1%2Ccd_min%3A8%2F4%2F2023%2Ccd_max%3A8%2F1%2F2023`
+#### 2. **Domain**:
+- `www.google.com`
+  - The domain name of the website, in this case, Google's domain.
 
-This parameter is defining a custom date range for the Google search. `tbs` stands for 'to be specified', and it indicates that additional parameters are being specified.
+#### 3. **Path**:
+- `/search`
+  - Represents the path on the website being accessed. Here, it indicates you're using Google's search feature.
 
-The `%3A` and `%2C` you see in the URL are URL encoded characters representing `:` and `,` respectively. URL encoding is used to replace unsafe ASCII characters with a "%" followed by two hexadecimal digits. 
+#### 4. **Query Parameters**:
+These are the key-value pairs after the `?` and are separated by `&`.
 
-The `cdr:1` value means that a custom date range is being used (with `cdr` standing for 'custom date range'). The `1` value is enabling this feature.
+---
 
-The `cd_min:8/4/2023` and `cd_max:8/1/2023` values are specifying the start and end of the date range. `cd_min` is the minimum (or start) date and `cd_max` is the maximum (or end) date. The dates are in the format month/day/year. 
+### Emphasized Query Parameters:
 
-Thus, the search is applying a filter to only return results from between August 1, 2023, and August 4, 2023. 
+1. **Find pages with… “all these words:”**
+    - Parameter: `as_q`
+    - Value: `harvard`
+    - In the URL: `as_q=harvard`
+    - This means you're searching for pages containing the word "harvard".
 
-Note that the start date is later than the end date in this particular example, which seems unusual. The user might have intended to swap these dates.
+2. **Find pages with… “this exact word or phrase:”**
+    - Parameter: `as_epq`
+    - Value: `html`
+    - In the URL: `as_epq=html`
+    - This means you're searching for pages with the exact phrase "html".
+
+3. **Find pages with… “any of these words:”**
+    - Parameter: `as_oq`
+    - Value: `html, css, javascript`
+    - In the URL: `as_oq=html%2C+css%2C+javascript` (Note: `%2C` is a URL-encoded comma `,` and `+` represents a space.)
+    - This means you're searching for pages with any of the words "html", "css", or "javascript".
+
+4. **Find pages with… “none of these words:”**
+    - Parameter: `as_eq`
+    - Value: `bears`
+    - In the URL: `as_eq=bears`
+    - This means you're excluding pages containing the word "bears".
+
+---
+
+### Conclusion:
+
+The provided URL is a Google search URL. It's configured to find pages with the word "harvard", the exact phrase "html", any of the words "html", "css", or "javascript", but none of the word "bears".

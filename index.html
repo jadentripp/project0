@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Search</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="search">
-                <form action="https://www.google.com/search">
-                    <input type="text" name="q">
-                    <input type="submit" value="Google Search">
-                </form>
-            </div>
-            <div class="upper-right">
-                <a href="imageSearch.html">Image Search</a>
-                <a href="advancedSearch.html">Advanced Search</a>
-            </div>
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <!-- Links in the top right corner -->
+        <div class="upper-right">
+            <a href="imageSearch.html">Image Search</a>
+            <a href="advancedSearch.html">Advanced Search</a>
         </div>
-    </body>
+        <div style="display: flex; margin: 5px;">
+                <!-- Regular Google Search -->
+            <form action="https://www.google.com/search">
+                <input type="text" name="q" placeholder="Search...">
+                <input type="submit" value="Google Search">
+                <input type="submit" name="btnI" value="I'm Feeling Lucky">
+            </form>
+        </div>
+    </div>
+</body>
 </html>

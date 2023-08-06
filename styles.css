@@ -1,20 +1,56 @@
+/* Styles for centering the main container */
 .container {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Establish a positioning context for absolutely positioned child elements */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center container on the page */
+    height: 100vh; /* Full height of the viewport */
+    position: relative; /* This allows us to position the links absolutely within this container */
 }
 
+/* Positioning the links at the top right */
 .upper-right {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
     position: absolute; /* Absolute positioning */
     top: 10px; /* Offset from the top */
     right: 10px; /* Offset from the right */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 5px; /* Space between links */
 }
 
+/* Styles for the search forms */
 .search {
-    /* Any specific styles for the search div if needed */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between elements */
+    padding: 10px; /* Padding around the form */
+    border: 1px solid #ccc; /* Border for the form */
+}
+
+/* Styles for the text input */
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Styles for the submit button */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #357abD;
+}
+
+/* Responsive rule for smaller screens */
+@media (max-width: 480px) {
+    .search {
+        width: 90%;
+    }
 }
