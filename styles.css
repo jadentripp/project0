@@ -1,12 +1,20 @@
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Establish a positioning context for absolutely positioned child elements */
 }
 
 .upper-right {
     display: flex;
     flex-direction: column;
-    margin: 3px;
     gap: 5px;
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Offset from the top */
+    right: 10px; /* Offset from the right */
+}
+
+.search {
+    /* Any specific styles for the search div if needed */
 }

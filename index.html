@@ -6,13 +6,12 @@
     </head>
     <body>
         <div class="container">
-                <!-- The action attribute on the form told the browser that when the form is submitted, the data should be sent to https://www.google.com/search. -->
-            <form action="https://www.google.com/search">
-                <input type="text" name="q">
-                <!-- And by adding an input field to the form whose name attribute was q, whatever the user types into that input field is included as a GET parameter in the URL. -->
-                <input type="submit" value="Google Search">
-            </form>
-            <!-- This produced https://www.google.com/search?q=hello+world with the query 'hello world'-->
+            <div class="search">
+                <form action="https://www.google.com/search">
+                    <input type="text" name="q">
+                    <input type="submit" value="Google Search">
+                </form>
+            </div>
             <div class="upper-right">
                 <a href="imageSearch.html">Image Search</a>
                 <a href="advancedSearch.html">Advanced Search</a>
